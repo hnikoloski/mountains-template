@@ -1,0 +1,37 @@
+.color-lblue {
+  color: $lblue;
+}
+.color-gray {
+  color: $gray;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.ff-bringin {
+  font-family: "Bringin";
+  text-transform: none;
+}
+.section-title {
+  font-weight: $bold;
+  font-size: 205rem;
+  position: relative;
+  padding-top: 259rem;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 41rem;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: url("../assets/img/icons/wave-divider.svg");
+    @include bg-props(contain, center, no-repeat);
+  }
+  span {
+    font: inherit;
+  }
+}

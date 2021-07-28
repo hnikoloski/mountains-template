@@ -1,0 +1,163 @@
+#travel-with-us {
+  height: 7547rem;
+  padding-top: 632rem;
+  background: url("../assets/img/map-bg.jpg");
+  @include bg-props(cover, center, no-repeat);
+  .section-title {
+    margin-bottom: 650rem;
+  }
+  .slider {
+    width: 7720rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    .slick-arrow {
+      position: absolute;
+      @include ver-center();
+      background: none;
+      border: none;
+      font-size: 335rem;
+      color: #2c2e37;
+      transition: color 0s;
+      &:hover {
+        color: $lblue;
+      }
+      &.slick-prev {
+        left: -540rem;
+      }
+      &.slick-next {
+        right: -540rem;
+      }
+    }
+    // Gapps:
+    /* the slides */
+    .slick-slide {
+      margin: 0 125rem;
+    }
+    /* the parent */
+    .slick-list {
+      margin: 0 -125rem;
+    }
+    .single-slide {
+      height: 2580rem;
+      @include borderRadius(4px);
+      position: relative;
+      width: 1360rem;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url("../assets/img/icons/pattern-rdy.svg");
+        background-repeat: repeat;
+        background-size: 5px;
+        background-position: center;
+        opacity: 0.1;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+        z-index: 1;
+      }
+      .content-wrap {
+        position: relative;
+        z-index: 9;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        .rating {
+          padding-top: 112rem;
+          padding-left: 177rem;
+          i {
+            color: #fff;
+            font-size: 110rem;
+            margin-right: 25rem;
+            &:last-of-type {
+              margin-right: 0;
+            }
+          }
+        }
+        .info {
+          padding-left: 177rem;
+          color: #fff;
+          h3 {
+            color: inherit;
+            font-size: 190rem;
+            margin-bottom: 160rem;
+          }
+          p {
+            color: inherit;
+            font-size: 110rem;
+          }
+        }
+        .price-wrap {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-direction: row;
+          flex-wrap: wrap;
+          align-content: center;
+          padding: 171rem 139rem;
+          background: rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(4.5px);
+          -webkit-backdrop-filter: blur(5.5px);
+
+          p {
+            color: #fff;
+            &.regular {
+              text-decoration: line-through;
+              font-size: 125rem;
+            }
+            &.promo {
+              font-size: 180rem;
+              font-weight: $bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  #travel-with-us {
+    height: auto;
+    padding-bottom: 1100rem;
+    .slider {
+      overflow-x: hidden;
+      width: auto;
+      .slick-arrow {
+        top: 180rem;
+        z-index: 9;
+        &.slick-prev {
+          left: 0;
+        }
+        &.slick-next {
+          right: 0;
+        }
+      }
+      // Gapps:
+      /* the slides */
+      .slick-slide {
+        margin: 0 0;
+      }
+      /* the parent */
+      .slick-list {
+        margin: 0 0;
+      }
+      .single-slide {
+        .content-wrap {
+          .rating {
+            margin: 150rem auto 0 auto;
+            padding-left: 0;
+            padding-top: 0;
+          }
+        }
+      }
+    }
+  }
+}

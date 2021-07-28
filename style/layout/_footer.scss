@@ -1,0 +1,130 @@
+footer {
+  background: url("../assets/img/decorations/footer-bg.png");
+  @include bg-props(cover, center, no-repeat);
+  height: 7450rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  padding-top: 2460rem;
+  .top-row {
+    form {
+      width: 3475rem;
+      background: rgba(255, 255, 255, 0.4);
+      box-shadow: 0px 5px 51px 0px rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border-radius: 10px;
+      padding: 288rem 210rem 342rem 210rem;
+      h3 {
+        font-size: 250rem;
+        margin-bottom: 25rem;
+        font-weight: $bolder;
+        letter-spacing: 0.1em;
+      }
+      p {
+        color: #383e4a;
+        font-size: 110rem;
+        margin-bottom: 290rem;
+      }
+      input {
+        width: 100%;
+        &[type="text"],
+        &[type="email"],
+        &[type="tel"] {
+          height: 410rem;
+          margin-bottom: 145rem;
+          font-size: 125rem;
+          padding: 55rem 35rem;
+          border: none;
+          @include borderRadius(4px);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+          &.error {
+            background: rgb(220, 41, 41, 0.1);
+            &::placeholder {
+              color: red;
+            }
+          }
+        }
+      }
+      label {
+        &.error {
+          font-size: 100rem;
+          color: #dc2929;
+          margin-bottom: 145rem;
+          margin-top: -85rem;
+        }
+      }
+    }
+  }
+  .bottom-row {
+    padding: 173rem 0;
+    width: 100%;
+    background: rgb(58, 76, 82);
+    background: -moz-linear-gradient(
+      45deg,
+      rgba(58, 76, 82, 1) 0%,
+      rgba(64, 104, 114, 1) 90%
+    );
+    background: -webkit-linear-gradient(
+      45deg,
+      rgba(58, 76, 82, 1) 0%,
+      rgba(64, 104, 114, 1) 90%
+    );
+    background: linear-gradient(
+      45deg,
+      rgba(58, 76, 82, 1) 0%,
+      rgba(64, 104, 114, 1) 90%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3a4c52",endColorstr="#406872",GradientType=1);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    .copy-text {
+      font-size: 125rem;
+      color: #fff;
+      opacity: 0.5;
+    }
+    ul {
+      li {
+        &:not(:last-of-type) {
+          margin-right: 55rem;
+        }
+        a {
+          display: block;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+    .tel {
+      font-size: 186rem;
+      font-weight: $bolder;
+      color: #fff;
+      opacity: 0.5;
+      letter-spacing: 0.01em;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  footer {
+    height: auto;
+    padding-top: 1100rem;
+    .bottom-row {
+      flex-direction: column;
+      ul {
+        margin: 150rem 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Bringin';
+    src: url('Bringin.eot');
+    src: url('Bringin.eot?#iefix') format('embedded-opentype'),
+        url('Bringin.woff2') format('woff2'),
+        url('Bringin.woff') format('woff'),
+        url('Bringin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,30 @@
+// Setup
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Raleway:wght@300;400;600;700&display=swap");
+html {
+  font-size: 0.0277vw !important;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+@media (min-width: 476px) {
+  html {
+    font-size: 0.0077vw !important;
+  }
+}
+@import "./helpers/variables.scss";
+@import "./fonts/fonts.scss";
+@import "./helpers/style-setup";
+@import "./helpers/resets.scss";
+@import "./helpers/helpers.scss";
+@import "./helpers/typography.scss";
+@import "./helpers/animations";
+@import "./layout/header";
+@import "./layout/footer";
+@import "./components/btns";
+@import "./components/hero";
+@import "./components/our-journal";
+@import "./components/cta-form-section";
+@import "./components/travel-with-us";
+@import "./components/gallery";
+@import "./components/logos-bar";
